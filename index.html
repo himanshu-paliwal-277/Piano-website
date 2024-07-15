@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano Using js</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- website logo -->
+     <link rel="shortcut icon" href="./Assets/piano_logo.jpg" type="image/x-icon">
+    <style>
+        .key {
+            transition: 100ms;
+        }
+    </style>
+  </head>
+  <body class="sm:bg-gradient-to-t bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div class="w-full h-screen w-full h-screen sm:rotate-0 rotate-90  flex flex-col justify-center items-center">
+        <div class="bg-black flex justify-between w-[750px] py-8 border-b-2 border-gray-700 rounded-t-xl px-8">
+            <span class="text-white text-2xl">Playable  Piano</span>
+            <div class="flex items-center">
+                <span class="text-white text-lg mr-4">Volume</span>
+                <input class="h-1" type="range" id="volumeControl" min="10" max="100" value="100">
+            </div>
+            <label class="inline-flex items-center cursor-pointer">
+                <span class="ms-3 mr-3 font-medium text-gray-900 dark:text-gray-300">Show keys</span>
+                <input type="checkbox" value="" class="sr-only peer" id="key_show_hide_button">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            </label>
+        </div>
+        <!-- Piano -->
+        <div class="flex gap-[4px] relative px-6 border-red-400 rounded-b-xl pb-10 bg-black w-[750px] h-[50%] text-lg">
+            <!-- Large keys -->
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">A</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">S</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">D</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">F</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">G</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">H</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">J</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">K</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">L</span>
+            </div>
+            <div class="key bg-white w-[10%] rounded cursor-pointer flex items-end justify-center pb-2">
+                <span class="keys_text">;</span>
+            </div>
+            
+            <!-- Small keys -->
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[75px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">W</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[145px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">E</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[285px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">T</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[355px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">Y</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[430px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">U</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[570px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">O</span>
+            </div>
+            <div class="key bg-black rounded-b w-[5%] h-[55%] left-[640px] absolute flex items-end justify-center pb-2">
+                <span class="text-white text-sm keys_text">P</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>
